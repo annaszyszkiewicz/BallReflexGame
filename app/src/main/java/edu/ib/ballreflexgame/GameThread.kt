@@ -1,6 +1,7 @@
 package edu.ib.ballreflexgame
 
 import android.graphics.Canvas
+import android.util.Log
 import android.view.SurfaceHolder
 import java.lang.Exception
 
@@ -56,10 +57,10 @@ class GameThread(var surfaceHolder: SurfaceHolder, var game: Game) : Thread() {
             totalTime += System.nanoTime() - startTime
             frameCount++
             if(frameCount == FPS){
-                avgFPS = 100.0 / ((totalTime / frameCount) / 1000000)
+                avgFPS = 1000.0 / ((totalTime / frameCount) / 1000000)
                 frameCount = 0
                 totalTime = 0
-                System.out.println(avgFPS)
+                Log.d("avgFPS", avgFPS.toString())
             }
         }
     }

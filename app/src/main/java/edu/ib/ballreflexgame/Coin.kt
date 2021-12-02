@@ -13,11 +13,12 @@ class Coin(
     vy: Double,
     ax: Double,
     ay: Double,
-    var r: Double
-) : Item(x, y, paint, vx, vy, ax, ay) {
+    var r: Double,
+    game: Game
+) : Item(x, y, paint, vx, vy, ax, ay, game) {
 
     override fun collide(ball: Ball) {
-        TODO("Not yet implemented")
+
     }
 
     override fun update() {

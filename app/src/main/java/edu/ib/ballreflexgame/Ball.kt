@@ -11,8 +11,9 @@ class Ball(
     vy: Double,
     ax: Double,
     ay: Double,
-    var radius: Double
-) : GameObject(x, y, paint, vx, vy, ax, ay) {
+    var radius: Double,
+    game: Game
+) : GameObject(x, y, paint, vx, vy, ax, ay, game) {
 
 
     /**
@@ -30,8 +31,8 @@ class Ball(
             x = radius
             vx *= -0.5
         }
-        if (x > view.width - radius) {
-            x = view.width - radius
+        if (x > 1080 - radius) {
+            x = 1080 - radius
             vx *= -0.5
         }
     }

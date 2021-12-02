@@ -10,7 +10,8 @@ abstract class Item(
     vy: Double,
     ax: Double,
     ay: Double,
-) : GameObject(x, y, paint, vx, vy, ax, ay) {
+    game: Game
+) : GameObject(x, y, paint, vx, vy, ax, ay, game) {
 
     abstract fun collide(ball: Ball)
 }

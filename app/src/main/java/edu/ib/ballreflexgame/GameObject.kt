@@ -2,7 +2,6 @@ package edu.ib.ballreflexgame
 
 import android.graphics.Canvas
 import android.graphics.Paint
-import android.view.View
 
 abstract class GameObject(
     var x: Double,
@@ -11,10 +10,9 @@ abstract class GameObject(
     var vx: Double,
     var vy: Double,
     var ax: Double,
-    var ay: Double
+    var ay: Double,
+    var game: Game
 ) {
-
-    lateinit var view: View
 
     abstract fun update()
 
